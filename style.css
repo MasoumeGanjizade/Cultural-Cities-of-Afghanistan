@@ -1,0 +1,335 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    font-family: "Zilla Slab", serif;
+    margin: 0;
+}
+
+header {
+    background-color: #1AA997;
+    color: #FF501E;
+    text-align: center;
+    padding: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+nav {
+    background-color: #35C3B7;
+    padding: 10px 20px;
+    overflow: hidden; /* برای جلوگیری از ریختن float */
+}
+
+.rightnav {
+    float: right;
+}
+
+.leftnav {
+    float: left;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.leftnav li {
+    float: left;
+    margin: 0 15px;
+}
+
+.leftnav li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.leftnav li a:hover {
+    display: block;
+    color: #FF501E;
+}
+
+.rightnav input[type="search"] {
+    width: 100px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #FF501E;
+    transition: width 2s linear, background-color 2s linear;
+    margin-top: 5px;
+}
+.rightnav input[type="search"]:hover {
+    width: 200px;
+}
+.rightnav input::placeholder {
+    color: #FF501E;
+    text-align: center;
+    font-size: 15px;
+}
+
+.clear {
+    clear: both;
+}
+
+.mainsection1 {
+    background-image: url(./media/sakhi.jpg);
+    background-repeat:no-repeat ;
+    width: 100%;
+    height: 500px;
+    background-size: 100% 100%;
+    animation: slider 50s linear infinite;
+}
+
+@keyframes slider {
+    0% {
+       background-image : url(./media/sakhi.jpg);
+       background-size: 100% 100%;
+
+    }
+    50% {
+        background-image: url(./media/Afghanistan-1536x946.png);
+        background-size: 100% 100%;
+    }
+    100% {
+        background-image: url(./media/beautiful.webp);
+        background-size: 100% 100%;
+
+    }
+}
+
+.overlay-txt{
+    position: absolute;
+    top: 45%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background: rgba(1, 51, 50,0.5);
+    padding: 30px;
+    font-size: 25px;
+    text-align: center;
+    border-radius: 5px;
+}
+.mainsection2{
+    background-color: #C0EDE8;
+    padding: 20px;
+    text-align: center;
+    padding-bottom: 50px;  
+   
+}
+.cards{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+.card{
+ background-color: #EEF8FA;
+ border-radius: 5%;
+ box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+ transition: 0.3s;
+ width: 350px;
+ height: 20%;
+ transition: 0.3s ease-in-out;
+
+
+}
+.card:hover {
+    transform: scale(1.05);
+}
+.card> .container> p{
+    max-height: 50px; 
+    overflow-y: auto; 
+    padding: 10px;
+
+}
+.image> img{
+ width: 300px;
+ height: 150px;
+ border-radius: 5px;
+ margin-top: 30px;
+}
+.image> .Ghadamgah:hover{
+    content: url(./media/sakhi.jpg);
+}
+.image> .Shah:hover{
+    content: url(./media/download.jpeg);
+}
+.image> .Menarjam:hover{
+    content: url(./media/Jam_Qasr_Zarafshan.jpg);
+}
+.mainsection3{
+    background-color: #35C3B7;
+    padding: 5px;
+    text-align: center;
+    padding-bottom: 50px; 
+
+}
+.card1{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 30px;
+    border: 2px  solid black;
+    border-radius: 5px;
+}
+img.Mazarsharif{
+    width: 600px;
+    height: 300px;
+    padding: 25px 25px;
+    border-radius: 50px;
+    animation: Mazarsharif 10s infinite alternate ease-in-out ;
+}
+@keyframes Mazarsharif{
+    0% {
+        content: url(./media/Mazar-sharif.jpg);
+    }
+    50%{
+        content: url(./media/sakhi.jpg);
+    }
+    100%{
+        content: url(./media/Mazar-sharif.jpg);
+    }
+}
+.container1> p{
+    width: 600px;
+    max-height: 200px;
+    overflow: auto;
+    text-align: justify;
+}
+.mainsection4{
+    background-color: #C0EDE8;
+    padding: 8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.contact-us{
+    padding: 10px;
+    margin: 20px;
+}
+.contact-us> ul{
+    list-style: none;
+    padding-left: 0;
+}
+.form-detail{
+    margin-top: 30px;
+}
+form> label{
+    color: #FF501E;
+    font-weight: bold;
+}
+form> #Name {
+    border-radius: 3px;
+    border-color: #E6E6E6;
+    width: 200px ;
+    height: 30px;
+}
+#input{
+    border-radius: 3px;
+    border-color: #E6E6E6;
+    width: 410px;
+    height: 30px;
+}
+textarea {
+    width: 410px;
+    height: 70px;
+    border-radius: 3px;
+    border-color: #E6E6E6;
+    font-family: "Zilla Slab", serif;
+    font-size: 15px;
+}
+
+input::placeholder{
+    color: gray;
+    transition: opacity 0.3s;
+}
+input:focus::placeholder{
+    opacity: 0;
+
+}
+form button {
+    width: 100px;
+    height: 40px;
+    color: white;
+    font-size: 17px;
+    background-color: #FF501E;
+    border: none;
+    border-radius: 30px;
+    display: block;
+    margin-top: 10px;
+}
+
+form button:hover {
+    background-color: orange;
+    border-color: orange;
+}
+.subtitle {
+    font-size: 18px;
+    color: #FF501E;
+    animation: fadeIn 2s ease-in-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+#loader {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: #F5F5DC;
+    z-index: 9999;
+    animation: fadeOut 2s forwards 2s;
+}
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+.card footer.quote {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    color: #8B4513;
+    font-style: italic;
+}
+.card:hover footer.quote {
+    opacity: 1;
+}
+footer {
+    background-color: #1AA997;
+    color: black;
+    padding: 20px;
+}
+
+.footer-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+}
+
+.footer-section {
+    flex: 1 1 30%;
+    padding: 10px;
+    box-sizing: border-box;
+    min-width: 250px; 
+}
+
+.footer-section h3 {
+    color: #FF501E;
+}
+
+.footer-section a{
+    text-decoration: none;
+}
+
+
+.clear {   
+    clear: both;
+}
+hr {
+    border: none;
+    border-top: 1px dashed #FF501E; 
+    width: 100%; 
+}
+footer .all-right {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 14px;
+}
